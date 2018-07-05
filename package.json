@@ -1,13 +1,15 @@
 {
-  "name": "npm-package-structure",
-  "version": "1.0.0",
-  "description": "Simple structure proyect for create npm package",
+  "name": "react-component-input-lp",
+  "version": "1.0.1",
+  "description": "Simple input component ",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
     "build": "webpack"
   },
+  "repository": "brayanlp/react-component-input-lp",
+  "homepage": "https://brayanlp.github.io/react-component-input-lp",
   "keywords": [],
   "author": {
     "name": "brayanlp",
@@ -27,6 +29,7 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.5.1"
+    "babel-preset-env": "^1.5.1",
+    "cleave.js": "^1.3.7"
   }
 }
