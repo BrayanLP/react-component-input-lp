@@ -19,6 +19,12 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/,
+        include: path.resolve(__dirname, 'src/components'),
+        exclude: /(node_modules|bower_components|build)/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   externals: {

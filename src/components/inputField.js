@@ -1,9 +1,6 @@
-// import { default as InputLp } from './components/inputSimple';
-// import { default as InputFieldLp } from './components/inputField';
-
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './components/inputField.css';
+// import styles from './inputField.css';
 const InputFieldLp = ({
   // type,
   // name,

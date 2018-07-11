@@ -1,15 +1,12 @@
-// import { default as InputLp } from './components/inputSimple';
-// import { default as InputFieldLp } from './components/inputField';
-
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './components/inputField.css';
-const InputFieldLp = ({
-  // type,
-  // name,
+import styles from './input.css';
+const InputLp = ({
+  type,
+  name,
   label,
-  // onChange,
-  // value,
+  onChange,
+  value,
   placeholder,
   wrapperClass,
   labelClass,
@@ -18,8 +15,6 @@ const InputFieldLp = ({
   error,
   required,
   autoComplete,
-  disabled,
-  input,
 }) => {
   return (
     <div
@@ -29,14 +24,17 @@ const InputFieldLp = ({
     >
       {label && <label className={labelClass}>{label}</label>}
       <input
-        {...input}
+        type={type}
+        name={name}
+        id={name}
         required={required ? required : false}
         className={
           inputClass ? 'form-control-lp ' + inputClass : 'form-control-lp'
         }
         placeholder={placeholder}
+        value={value ? value : ''}
+        onChange={onChange}
         autoComplete={autoComplete ? autoComplete : 'off'}
-        disabled={disabled ? 'true' : false}
       />
       {required && (
         <span
@@ -53,15 +51,16 @@ const InputFieldLp = ({
   );
 };
 
-InputFieldLp.propTypes = {
-  name: PropTypes.string,
+InputLp.propTypes = {
+  name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  // onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   autoComplete: PropTypes.string,
-  // icon: PropTypes.string,
+  icon: PropTypes.string,
   error: PropTypes.string,
+  // value: PropTypes.,
 };
 
-export default InputFieldLp;
+export default InputLp;
